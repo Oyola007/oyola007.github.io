@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evans Omondi Oyola | ICT Graduate & Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Evans Omondi Oyola, BSc ICT graduate from Kenya. Full-stack PHP/MySQL web apps, Flutter mobile apps, hospital IT support and networking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0b;--panel:#141414;--line:#2a2a2a;--text:#e8e8e8;--muted:#9a9a9a;--accent:#FFD400}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:rgba(11,11,11,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:26px;letter-spacing:1px}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;font-size:14px;color:var(--muted)}
+nav ul a:hover{color:var(--accent)}
+.hero{padding:90px 0 70px;border-bottom:1px solid var(--line)}
+.tag{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:1px}
+h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(52px,10vw,104px);line-height:.95;margin:14px 0 18px;font-weight:400}
+h1 em{font-style:normal;color:var(--accent)}
+.hero p{max-width:620px;color:var(--muted);font-size:17px}
+.btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:12px 22px;border:1px solid var(--accent);font-weight:600;font-size:14px;transition:.15s}
+.btn.primary{background:var(--accent);color:#000}
+.btn:hover{transform:translateY(-2px)}
+section{padding:70px 0;border-bottom:1px solid var(--line)}
+h2{font-family:'Bebas Neue',Impact,sans-serif;font-size:42px;font-weight:400;margin-bottom:28px}
+h2::after{content:"";display:block;width:48px;height:4px;background:var(--accent);margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);padding:22px;transition:.15s;display:flex;flex-direction:column}
+.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card h3{font-size:19px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:14.5px;flex:1}
+.stack{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);margin:14px 0 10px}
+.card a.link{font-size:13px;font-weight:600;color:var(--text)}
+.card a.link:hover{color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:13px;padding:7px 14px;border:1px solid var(--line);background:var(--panel)}
+.skills h3{font-size:15px;color:var(--muted);margin:22px 0 10px;font-weight:500}
+.item{border-left:3px solid var(--accent);padding:2px 0 2px 18px;margin-bottom:26px}
+.item .when{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+.item h3{font-size:18px;margin:2px 0}
+.item .org{color:var(--accent);font-size:14px;margin-bottom:6px}
+.item ul{padding-left:18px;color:var(--muted);font-size:14.5px}
+.contact p{color:var(--muted);max-width:560px;margin-bottom:22px}
+footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:640px){nav ul{gap:14px;font-size:13px}.hero{padding:60px 0 50px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="logo" href="#top">EVANS<span>.</span>DEV</a>
+  <ul><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
+</nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div class="tag">// BSc ICT GRADUATE · KENYA</div>
+  <h1>EVANS OMONDI <em>OYOLA</em></h1>
+  <p>I build full-stack web applications and mobile apps, and I keep the hardware and networks underneath them running. From hospital IT support to multi-role PHP/MySQL platforms, I like practical systems that people actually use.</p>
+  <div class="btns">
+    <a class="btn primary" href="#projects">View my work</a>
+    <a class="btn" href="mailto:evansomondi392@gmail.com">Email me</a>
+  </div>
+</div></div>
+
+<section id="projects"><div class="wrap">
+  <h2>PROJECTS</h2>
+  <div class="grid">
+    <div class="card"><h3>HoodGym</h3>
+      <p>Gym management platform with admin, trainer and member portals. Includes bookings, packages, classes, progress tracking, M-Pesa STK Push payments and an AI chat widget powered by the Claude API.</p>
+      <div class="stack">PHP · MySQL · M-Pesa Daraja · Claude API</div>
+      <a class="link" href="https://github.com/Oyola007/hoodgym">View on GitHub →</a></div>
+    <div class="card"><h3>RoadRunner</h3>
+      <p>Bus booking platform with three role portals, interactive seat maps, QR-coded e-tickets, and dual payments through M-Pesa STK Push and Flutterwave.</p>
+      <div class="stack">PHP · MySQL · M-Pesa · Flutterwave</div>
+      <a class="link" href="https://github.com/Oyola007/roadrunner">View on GitHub →</a></div>
+    <div class="card"><h3>Hospital Management System</h3>
+      <p>Hospital system with four role-based portals and a public landing page, inspired by my attachment at Machakos Level 5 Referral Hospital.</p>
+      <div class="stack">PHP · MySQL · XAMPP</div>
+      <a class="link" href="https://github.com/Oyola007/hospital-management-system">View on GitHub →</a></div>
+    <div class="card"><h3>HoodAgent</h3>
+      <p>Android task and reminder app that turns natural-language input into structured tasks using the Claude API, with local notifications.</p>
+      <div class="stack">Flutter · Dart · Claude API</div>
+      <a class="link" href="https://github.com/Oyola007/hoodagent">View on GitHub →</a></div>
+    <div class="card"><h3>Airline Refund Portal</h3>
+      <p>Customer, admin and finance portals for handling ticket refunds, with OTP email login, an in-app chat with file, photo and video sharing, and refund-to-finance handover.</p>
+      <div class="stack">PHP · MySQL · PHPMailer</div>
+      <a class="link" href="https://github.com/Oyola007/refund-portal">View on GitHub →</a></div>
+    <div class="card"><h3>Flight Booking Website</h3>
+      <p>Airline booking site with database-driven flights and fares, seat selection, baggage extras, payment flow and an admin dashboard.</p>
+      <div class="stack">PHP · MySQL · XAMPP</div>
+      <a class="link" href="https://github.com/Oyola007/flight-booking">View on GitHub →</a></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap skills">
+  <h2>SKILLS</h2>
+  <h3>Development</h3>
+  <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Python</span><span class="chip">Flutter</span><span class="chip">Git &amp; GitHub</span></div>
+  <h3>IT &amp; Systems</h3>
+  <div class="chips"><span class="chip">Hardware maintenance</span><span class="chip">Networking</span><span class="chip">Data backup</span><span class="chip">Helpdesk support</span><span class="chip">Hospital information systems</span><span class="chip">MS Office</span></div>
+  <h3>Learning &amp; certifications</h3>
+  <div class="chips"><span class="chip">Python Essentials 1 &amp; 2</span><span class="chip">Data Science Essentials with Python</span><span class="chip">IT Customer Support Basics</span><span class="chip">Intro to Modern AI</span><span class="chip">Intro to Cybersecurity</span><span class="chip">Electrical Wireman Gr. II &amp; III (NITA)</span></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>EXPERIENCE &amp; EDUCATION</h2>
+  <div class="item"><div class="when">3 MONTHS</div><h3>ICT Attachment</h3><div class="org">Machakos Level 5 Referral Hospital</div>
+    <ul><li>Hardware maintenance and troubleshooting for hospital computers.</li><li>Trained staff on the hospital information system and supported its daily operation.</li><li>Helped with network setup and maintenance, and ran routine data backups.</li></ul></div>
+  <div class="item"><div class="when">GAME AFRICA PROGRAMME</div><h3>Community &amp; Peacebuilding Programme</h3><div class="org">Midrift Hurinet</div>
+    <ul><li>Coordinated events and ICT-driven activities that brought diverse groups together.</li><li>Worked with NGOs, communities and international partners.</li></ul></div>
+  <div class="item"><div class="when">2022 – 2026</div><h3>BSc Information &amp; Communication Technology</h3><div class="org">Scott Christian University · Second Class Upper Division</div></div>
+  <div class="item"><div class="when">2023 – 2024</div><h3>Electrical Wireman, Grade III &amp; Grade II</h3><div class="org">Nakuru Youth Polytechnic · NITA National Trade Test</div></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>GET IN TOUCH</h2>
+  <p>I'm looking for an ICT internship or entry-level role in software development or systems support. Let's talk.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:evansomondi392@gmail.com">evansomondi392@gmail.com</a>
+    <a class="btn" href="https://github.com/Oyola007">GitHub</a>
+  </div>
+</div></section>
+</main>
+<footer>© <span id="y"></span> Evans Omondi Oyola · Machakos, Kenya</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
