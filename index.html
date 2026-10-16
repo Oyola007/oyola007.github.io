@@ -36,7 +36,8 @@ h1{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(34px,6vw,54p
 h1 em{font-style:normal;color:var(--teal)}
 .hero p{max-width:600px;color:var(--muted);font-size:17px}
 .btns{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-.btn{padding:12px 22px;border-radius:30px;border:2px solid var(--coral);font-weight:600;font-size:14px;transition:.15s}
+.btn{padding:12px 22px;border-radius:30px;border:2px solid var(--coral);font-weight:600;font-size:14px;transition:.15s;word-break:break-word;max-width:100%}
+@media(max-width:480px){.btns{flex-direction:column;align-items:stretch}.btn{text-align:center;font-size:13px}}
 .btn.primary{background:var(--coral);color:#fff;border-color:var(--coral)}
 .btn:hover{transform:translateY(-2px)}
 .avatar-ring{width:150px;height:150px;border-radius:50%;margin:0 auto 26px;background:conic-gradient(var(--coral),var(--amber),var(--teal),var(--sky),var(--coral));display:flex;align-items:center;justify-content:center;padding:6px}
@@ -155,6 +156,7 @@ footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center;paddin
   <div class="btns">
     <a class="btn primary" href="mailto:evansomondi392@gmail.com">evansomondi392@gmail.com</a>
     <a class="btn" href="https://github.com/Oyola007">GitHub</a>
+    <a class="btn" href="tel:+254790322423">+254 790 322 423</a>
   </div>
 </div></section>
 </main>
