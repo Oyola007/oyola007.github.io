@@ -2,56 +2,78 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Evans Omondi Oyola | ICT Graduate & Full-Stack Developer</title>
 <meta name="description" content="Portfolio of Evans Omondi Oyola, BSc ICT graduate from Kenya. Full-stack PHP/MySQL web apps, Flutter mobile apps, hospital IT support and networking.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0b0b;--panel:#141414;--line:#2a2a2a;--text:#e8e8e8;--muted:#9a9a9a;--accent:#FFD400}
+:root{
+  --bg:#fffaf2;--panel:#ffffff;--line:#f0ddc4;
+  --text:#2b2320;--muted:#7a6e63;
+  --coral:#ff6f59;--teal:#1d9e75;--amber:#ffb703;--sky:#378add;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#1c1712;--panel:#262019;--line:#3a2f24;--text:#f3ebe1;--muted:#b8ab9d;}
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.6}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.65;padding-top:env(safe-area-inset-top,0px)}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1000px;margin:0 auto;padding:0 22px}
-header{position:sticky;top:0;z-index:10;background:rgba(11,11,11,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb, var(--bg) 90%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 nav{display:flex;justify-content:space-between;align-items:center;height:60px}
-.logo{font-family:'Bebas Neue',Impact,sans-serif;font-size:26px;letter-spacing:1px}
-.logo span{color:var(--accent)}
+.logo{font-family:'Poppins',sans-serif;font-weight:700;font-size:20px}
+.logo span{color:var(--coral)}
 nav ul{display:flex;gap:22px;list-style:none;font-size:14px;color:var(--muted)}
-nav ul a:hover{color:var(--accent)}
-.hero{padding:90px 0 70px;border-bottom:1px solid var(--line)}
-.tag{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:1px}
-h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(52px,10vw,104px);line-height:.95;margin:14px 0 18px;font-weight:400}
-h1 em{font-style:normal;color:var(--accent)}
-.hero p{max-width:620px;color:var(--muted);font-size:17px}
-.btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
-.btn{padding:12px 22px;border:1px solid var(--accent);font-weight:600;font-size:14px;transition:.15s}
-.btn.primary{background:var(--accent);color:#000}
+nav ul a:hover{color:var(--coral)}
+.hero{padding:80px 0 60px;background:linear-gradient(160deg,#fff0e3,#fff8ee 60%);border-bottom:1px solid var(--line)}
+@media (prefers-color-scheme: dark){.hero{background:linear-gradient(160deg,#2a2016,#1c1712 60%)}}
+.tag{font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;color:var(--coral);letter-spacing:.5px}
+h1{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(34px,6vw,54px);line-height:1.1;margin:12px 0 16px}
+h1 em{font-style:normal;color:var(--teal)}
+.hero p{max-width:600px;color:var(--muted);font-size:17px}
+.btns{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:30px;border:2px solid var(--coral);font-weight:600;font-size:14px;transition:.15s}
+.btn.primary{background:var(--coral);color:#fff;border-color:var(--coral)}
 .btn:hover{transform:translateY(-2px)}
-section{padding:70px 0;border-bottom:1px solid var(--line)}
-h2{font-family:'Bebas Neue',Impact,sans-serif;font-size:42px;font-weight:400;margin-bottom:28px}
-h2::after{content:"";display:block;width:48px;height:4px;background:var(--accent);margin-top:6px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
-.card{background:var(--panel);border:1px solid var(--line);padding:22px;transition:.15s;display:flex;flex-direction:column}
-.card:hover{border-color:var(--accent);transform:translateY(-3px)}
-.card h3{font-size:19px;margin-bottom:6px}
+.avatar-ring{width:150px;height:150px;border-radius:50%;margin:0 auto 26px;background:conic-gradient(var(--coral),var(--amber),var(--teal),var(--sky),var(--coral));display:flex;align-items:center;justify-content:center;padding:6px}
+.avatar-ring div{width:100%;height:100%;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:40px;color:var(--coral)}
+section{padding:60px 0;border-bottom:1px solid var(--line)}
+h2{font-family:'Poppins',sans-serif;font-weight:700;font-size:30px;margin-bottom:24px}
+h2 .dot{color:var(--coral)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.15s;display:flex;flex-direction:column}
+.card:hover{border-color:var(--coral);transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.06)}
+.card-top{height:6px;border-radius:6px;margin:-22px -22px 16px;background:var(--teal)}
+.card:nth-child(2) .card-top{background:var(--coral)}
+.card:nth-child(3) .card-top{background:var(--amber)}
+.card:nth-child(4) .card-top{background:var(--sky)}
+.card:nth-child(5) .card-top{background:var(--teal)}
+.card:nth-child(6) .card-top{background:var(--coral)}
+.card h3{font-family:'Poppins',sans-serif;font-size:18px;margin-bottom:6px}
 .card p{color:var(--muted);font-size:14.5px;flex:1}
-.stack{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);margin:14px 0 10px}
-.card a.link{font-size:13px;font-weight:600;color:var(--text)}
-.card a.link:hover{color:var(--accent)}
+.stack{font-size:12px;color:var(--teal);font-weight:600;margin:14px 0 10px}
+.card a.link{font-size:13px;font-weight:600;color:var(--coral)}
+.video-card{background:linear-gradient(135deg,#ffe8db,#fff);border:1px solid var(--line);border-radius:16px;padding:30px;text-align:center;margin-bottom:30px}
+@media (prefers-color-scheme: dark){.video-card{background:linear-gradient(135deg,#2e2318,#262019)}}
+.play-btn{width:64px;height:64px;border-radius:50%;background:var(--coral);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:22px}
+.badges{display:flex;flex-wrap:wrap;gap:14px}
+.badge{display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--line);border-radius:30px;padding:6px 16px 6px 6px}
+.badge img{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.badge span{font-size:13px;font-weight:500}
+.skills h3{font-family:'Poppins',sans-serif;font-size:14px;color:var(--teal);margin:22px 0 10px;font-weight:600}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
-.chip{font-family:'JetBrains Mono',monospace;font-size:13px;padding:7px 14px;border:1px solid var(--line);background:var(--panel)}
-.skills h3{font-size:15px;color:var(--muted);margin:22px 0 10px;font-weight:500}
-.item{border-left:3px solid var(--accent);padding:2px 0 2px 18px;margin-bottom:26px}
-.item .when{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
-.item h3{font-size:18px;margin:2px 0}
-.item .org{color:var(--accent);font-size:14px;margin-bottom:6px}
+.chip{font-size:13px;padding:7px 14px;border-radius:20px;border:1px solid var(--line);background:var(--panel)}
+.item{border-left:3px solid var(--teal);padding:2px 0 2px 18px;margin-bottom:26px}
+.item .when{font-size:12px;color:var(--muted);font-weight:600}
+.item h3{font-family:'Poppins',sans-serif;font-size:18px;margin:2px 0}
+.item .org{color:var(--coral);font-size:14px;margin-bottom:6px}
 .item ul{padding-left:18px;color:var(--muted);font-size:14.5px}
 .contact p{color:var(--muted);max-width:560px;margin-bottom:22px}
-footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
-@media(max-width:640px){nav ul{gap:14px;font-size:13px}.hero{padding:60px 0 50px}}
+footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center;padding-bottom:calc(28px + env(safe-area-inset-bottom,0px))}
 </style>
 </head>
 <body>
@@ -61,40 +83,46 @@ footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
 </nav></div></header>
 
 <main id="top">
-<div class="hero"><div class="wrap">
-  <div class="tag">// BSc ICT GRADUATE · KENYA</div>
-  <h1>EVANS OMONDI <em>OYOLA</em></h1>
-  <p>I build full-stack web applications and mobile apps, and I keep the hardware and networks underneath them running. From hospital IT support to multi-role PHP/MySQL platforms, I like practical systems that people actually use.</p>
-  <div class="btns">
+<div class="hero"><div class="wrap" style="text-align:center">
+  <div class="avatar-ring"><div>EO</div></div>
+  <div class="tag">BSc ICT GRADUATE · KENYA</div>
+  <h1 style="margin-left:auto;margin-right:auto">Hi, I'm Evans <em>Oyola</em></h1>
+  <p style="margin-left:auto;margin-right:auto">I build full-stack web and mobile apps, and keep the hardware and networks underneath them running. From hospital IT support to multi-role PHP/MySQL platforms, I like practical systems people actually use — and I'm excited to bring that energy to my first role.</p>
+  <div class="btns" style="justify-content:center">
     <a class="btn primary" href="#projects">View my work</a>
     <a class="btn" href="mailto:evansomondi392@gmail.com">Email me</a>
   </div>
 </div></div>
 
 <section id="projects"><div class="wrap">
-  <h2>PROJECTS</h2>
+  <h2>Projects<span class="dot">.</span></h2>
+  <div class="video-card">
+    <div class="play-btn">&#9654;</div>
+    <p style="font-weight:600;margin-bottom:6px">Project walkthroughs coming soon</p>
+    <p style="color:var(--muted);font-size:14px;max-width:460px;margin:0 auto"></p>
+  </div>
   <div class="grid">
-    <div class="card"><h3>HoodGym</h3>
+    <div class="card"><div class="card-top"></div><h3>HoodGym</h3>
       <p>Gym management platform with admin, trainer and member portals. Includes bookings, packages, classes, progress tracking, M-Pesa STK Push payments and an AI chat widget powered by the Claude API.</p>
       <div class="stack">PHP · MySQL · M-Pesa Daraja · Claude API</div>
       <a class="link" href="https://github.com/Oyola007/hoodgym">View on GitHub →</a></div>
-    <div class="card"><h3>RoadRunner</h3>
+    <div class="card"><div class="card-top"></div><h3>RoadRunner</h3>
       <p>Bus booking platform with three role portals, interactive seat maps, QR-coded e-tickets, and dual payments through M-Pesa STK Push and Flutterwave.</p>
       <div class="stack">PHP · MySQL · M-Pesa · Flutterwave</div>
       <a class="link" href="https://github.com/Oyola007/roadrunner">View on GitHub →</a></div>
-    <div class="card"><h3>Hospital Management System</h3>
+    <div class="card"><div class="card-top"></div><h3>Hospital Management System</h3>
       <p>Hospital system with four role-based portals and a public landing page, inspired by my attachment at Machakos Level 5 Referral Hospital.</p>
       <div class="stack">PHP · MySQL · XAMPP</div>
       <a class="link" href="https://github.com/Oyola007/hospital-management-system">View on GitHub →</a></div>
-    <div class="card"><h3>HoodAgent</h3>
+    <div class="card"><div class="card-top"></div><h3>HoodAgent</h3>
       <p>Android task and reminder app that turns natural-language input into structured tasks using the Claude API, with local notifications.</p>
       <div class="stack">Flutter · Dart · Claude API</div>
       <a class="link" href="https://github.com/Oyola007/hoodagent">View on GitHub →</a></div>
-    <div class="card"><h3>Airline Refund Portal</h3>
+    <div class="card"><div class="card-top"></div><h3>Airline Refund Portal</h3>
       <p>Customer, admin and finance portals for handling ticket refunds, with OTP email login, an in-app chat with file, photo and video sharing, and refund-to-finance handover.</p>
       <div class="stack">PHP · MySQL · PHPMailer</div>
       <a class="link" href="https://github.com/Oyola007/refund-portal">View on GitHub →</a></div>
-    <div class="card"><h3>Flight Booking Website</h3>
+    <div class="card"><div class="card-top"></div><h3>Flight Booking Website</h3>
       <p>Airline booking site with database-driven flights and fares, seat selection, baggage extras, payment flow and an admin dashboard.</p>
       <div class="stack">PHP · MySQL · XAMPP</div>
       <a class="link" href="https://github.com/Oyola007/flight-booking">View on GitHub →</a></div>
@@ -102,17 +130,17 @@ footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
 </div></section>
 
 <section id="skills"><div class="wrap skills">
-  <h2>SKILLS</h2>
+  <h2>Skills<span class="dot">.</span></h2>
   <h3>Development</h3>
   <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Python</span><span class="chip">Flutter</span><span class="chip">Git &amp; GitHub</span></div>
   <h3>IT &amp; Systems</h3>
   <div class="chips"><span class="chip">Hardware maintenance</span><span class="chip">Networking</span><span class="chip">Data backup</span><span class="chip">Helpdesk support</span><span class="chip">Hospital information systems</span><span class="chip">MS Office</span></div>
-  <h3>Learning &amp; certifications</h3>
-  <div class="chips"><span class="chip">Python Essentials 1 &amp; 2</span><span class="chip">Data Science Essentials with Python</span><span class="chip">IT Customer Support Basics</span><span class="chip">Intro to Modern AI</span><span class="chip">Intro to Cybersecurity</span><span class="chip">Electrical Wireman Gr. II &amp; III (NITA)</span></div>
+  <h3>Verified certifications</h3>
+  <div class="badges"><div class="badge"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAA4ADgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBlpaxW0SxoAuBy2Opq28cQUbZOfp16/wD1vzqnLdwwOFd/m64AzUh1yIs3Iy2cjafb/CvSbS0R4UYSldtblh44go2yc+469f8A61ViXycAEUS61E6tGxxubONpzVU31rknzGyfY0KS6sbpSvpH8C1uk/uj86MyD+EVU+2Wn/PVvyNTRTRP8yFse4PNNO+xDhJboW4t47uApKoyRwccg0VZ2Pt3FGC+pGKKThGWrHGrUp6J2M2W1l+3faISCQQdpBI6dKkeS+GCYYAe7bCCa2YJFWFQTz7CpBKp7n8RWcopvY6YVpKKVzDFzdlw7RWxYNu3EHOfrVIaeWYl5Byc8CuoaGGTlkU+9NFpADnyx+NCUF0KdWo+ph22nKzARxlz6t0FbdvbR2ybjgtjlj2qTeiDC4+gqCXMv3jhfQVV76LRGMpdW7sJrpGVkUE570UxkVUbA7UVcUlsc8229REkVUAJ59KPPHZTVPy3kmKxKzMeyjJrSttFvJADIyxL/tcn8qJOMdWzWNOc/hRD5/8As/rSG4AHIx+Nakek2iZ864ZyvXkKKtLYafGCfKjOBnLHd/OsXWgjeOEqPdnPG9T+6xpDejtGfzrpxb2QH+qg/wC+RUb2mnydYofwwKXt49jT6o+5zJunkYLtCg9e9FbV7pFokMk0O5Gj5wGyKK3hOM1eJx16cqcrMTRtSsvsKEOqsepx1rQ/tK0/57r+tFFYeyUtWdSxM4e6uhE13p7NlpEJ+hoF1pwzh0568Giil7GIfW59kIbjTScl0J9waPtGm5zvTP0NFFHsY9w+tz7Ig1TVbOKwmIlUlh2ooopOTpaRLjBYn3p9D//Z" alt="Python Essentials 1 badge"><span>Python Essentials 1</span></div><div class="badge"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAA4ADgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwBlpbRW0SxoAuBycdTVt0iCja/P069f/rfnVOW7hgcK7fN1wBmnnXIizc8tnI2H2/wr0m0tEeFGEpatPUsukQUbX59x16//AFqrEvngAikl1qJ1aNiRk5xsOarG+tck+Y2T/smhSXcHSlfSP4FrL/3R+dGX5+UVU+22n/PRvyNTRTRP8yFse6kZppp7EuEluhbi3S7gKSqMkcHHINFWdj7dxRgvqRiik4Rlqxxq1KeidjNktZft3nxEEgg7SDj6VIz3wwfJgBHVtpBPX/GtmCRVhUE8+wqUSqe5/EVnKKb2OmFaSilcwRcXe8O0dsWDbtxBzn61SGnksS8g5OeBXUtDDJyyKffFNFpAOfLH40JQXQp1aj6mHbacrMBHGXPq3QVt29tHbJuOC2OWPapN6IMDH0FQS5l+8cL6CqvfRaIxlLq3dhNdIysignPGaKYyKqNgdqKuKS2OebbeoiSKqAE8+lHnDspqnsd5isSszHsoya0rbRr2XBkZYl/2uT+VEuWO7NY05z+FEPn/AOz+tIbgAcjH41qxaPapnzZ2cr15CgVaXTrCMZ8mM45JY5/nWLrQRvHCVHuznTeJ/dY0hvR2jP511AtbTHEEP/fIqN7GxfrDD+AApe3j2NPqcu5zBunkYLtCg9e9FbN5pFokMk0O5WjGcBsiit4TjNXicdenKnKzDRtRsTYoQ6Kx6nHWtD+0bT/nutFFc7pKWrOpYiUPdXQia5092y0iE9+vNAuNOGcSJyMHrRRR7GI/rc+yEM2mk5LoT16mk87Tc/fT8zRRR7GPcPrU+yIdT1OyhsZyJQS4560UUUnJ0tIlRgsT70+h/9k=" alt="Python Essentials 2 badge"><span>Python Essentials 2</span></div><div class="badge"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAA4ADgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwB4AJ5OKldIgo2vz9OvX/6351Tlu4YHCu3zdcAZp51yIs3PLZyNp9v8K9KUtdzwYU21e34Fl0iCja/PuOvX/wCtVYl8nABFJLrUTq0bEjc2cbTmqxvrXJPmNn/dNCku43SlfSP4FrL/AN0UZf8Auiqn220/56N+RqaKaJ/mQtj3B5ppp7EuEluidSSASMGin7H27ijBfUjFFUZtNGbLay/bvPiIJBB2kEjp0p7PfDBMMAPdthBPX/GtqCRVhUE8+wqUSqe5/EVhKKb2O6FaSilcwRcXZcO0dsWDbtxBzn61TGnlmJeQcnPArqGhhk5ZFPvimi0gBz5Y/GhKC6FOrUfUw7bTlZgI4y59W6Ctu3to7dNxwWxyx7VJvRBhcfQVBLmXhjhfQVV76LRGMpdW7sJrpGVkUE5HWimMiqjYHairiktjnm23qIkiqgBPPpR5w7Kap7HeYrErMx7KMmtK30a9kGZGWJf9rk/lRLljq2axpzn8KIfP/wBn9aQ3AA5GPxrRg020yFlkmdj2xtH6f41YS205cf6Pkn+8pY1i60EbxwlR7tGGbxP7rGkN6O0Z/Oui2WIXIt0x/wBcx6Zpjw6c/W2X8I8Uvbx7Gn1R9znTdPIwXaFB696K17jTLM28k9vvQxjOM8H86K3hOM1dHHXpypuzJdLvLSG2CuVjkH3iR96rv9o2n/PdaKKxlRi3c6KeKnGKVkH9o2n/AD3Wj+0bT/nutFFT7CJf1ufZEUl5A7ZF6FHoBSNdwFsi+wM56UUUexiH1ufZEN5fQ/Y5YxP5zuMDAxiiiit6cFBaHJXqyqSuz//Z" alt="Data Science Essentials badge"><span>Data Science Essentials</span></div><div class="badge"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAA4ADgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCWztYrWFYowFAHJxyTVt0jCja/P069f/rVSnvre3k2SP8AP1wBnFL/AG9blm+bk5yNh/z2riUJPWxzblx0jAG1+fp16/8A1qrEybjgAio5Nct2BjZiMnONhzVc6lZEk+a2T/smn7OXYGi5uk/uD86MyDPyiqX9oWX/AD1f/vk1PDcwP80ZbHup5pODW6FYdc20d5bmOZByODjlT60VZCOU3+W6r6sMUUlKUdhptGRPazf2i1xCQxBztKkg8YwcU9jqCkMYYQR1bYQT1/xroreZEhUEnPcAVKJ0PqPqK6I1JJJXLWxy6zXm8MY7YsDncQc5+tU100k5eQfgK7J7e3m5aNG98UwWNqpz5S/jT9pPowsznLTTFdwIojI3q3QV0NrZxWib2wXA5c9vpUxkjjXCgcdlFVpd05+c4UdFFZuXV6hsLNeo6MiKxBGN3QUUxkVUbA5xRWMm3uQxqzIiAM3PoOTR9oHZT+NZzI73LCJWLn+6Oa0bfSb6QAyOIh/tcmqSk9hpN7B5/wDs/rSNdBRlhge5rRj0aID97NI59sKP0qdNMs0Ofs6k+rc/zrRUpdSlCRgnUUHSNj+VIdSHaFj9WFdGLO2H/LvF/wB8Cmvp9o/3reP8FxVeyY+RnNfbZZXC7VRSee5orYu9Ito4mmiDIyDOAciisKkXF6mck1uJpV9ZyWKlZFUsOWHU1YM1vg/6Y3PvRRWqqOOiL5mtA86DOftjfnSm4tz/AMvRxjGCaKKPbSDnYgmt+c3jEEYwTR51vn/j8bp60UU/bSDnZDf6ha2+nylrjfkHk0UUUJe01kNLn1Z//9k=" alt="Intro to Data Science badge"><span>Intro to Data Science</span></div><div class="badge"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAA4ADgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC2Bk8nFSskYUbX5+nXr/8AWqlPfW9vJskf5sZwBnFL/b1uWb5uTnI2H/PauKNOTV7HMkXGSMAbX5+nXr/9aqxMmTgAio5Nct2BjZiMnONhzVc6lZEk+a2T/smn7OXYLFzdJ/dH50ZkA+6Kpf2hZf8APV/++TU8NzA/zRs2PdTzScGt0KxZUkqCRg0U4I5Tf5bqvqwxRWbAyJ7WX+0WuISGIIO0qSDxjBxTm+3qQxhhBHVthBPX/Gujt5kSBQSc98CpROh9R9RXXGpJJK5otjllluwysY7YsDncQc5+tVF00k5eQfgK7J7e3m5aNG98UwWNqpz5S/jT9pPow1OctNMV3AiiMjerdBXQ2tnFaJvbBcDlz2+lTGSONcKBx2UVWl3Tn5zhR0Uf1rNye71YbCzXqOjIisQRjd0FFMZFWNsDnHWisZNvchjVmREUM3PoOTR9oHZT+NZzI7XLCJWLn+6Oa0bfSb6QAyOIl/2uTVJSew0m9g8//Z/Wka6CjLDA9zV06XDAgaeWWTJx8uBTki0xefIyfVwT/OtFSmUoSMs6ig6Rufypp1IdoWP1YVtBrDYCIE6Zx5Y4pDFp8oP+jqcDPCYqvZMfIzC+2yyuF2qik89zRWrNptmYHuLfepTnGeP1orCpFxepnJW3JtOubaK3CsVR/wCI461b+3W3/PZaKK0jVaVi1NpB9utv+ey1HNdW8iYS4VDkEHFFFP2sg52V/MQIFF8OO+OakWeMA5vASQR0/Wiin7aQc7I5rmJLKSITeazcDAooorGcnJ3ZEndn/9k=" alt="Intro to Modern AI badge"><span>Intro to Modern AI</span></div><div class="badge"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAA4ADgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwC/NM1xKXkbr09valdI9o2vz9OvX/61Upr63t5Nkj/PjOAM4p39vW5Zhu5OcjYfb/CuJQk9bHNuW3SMKNr8/Tr1/wDrVWJk3EAAimSa5bsDGzEZOcbDmqx1GyLE+a+T1+U0/Zy7A0XN0n9wfnRmQA5UVR+32P8Az1f/AL5NWIbmBvmjZsdsqeaTg1uhWLttPJCyyKSD3HrRTQjlN/luq+rDFFJSlHYabRkT2s39pNcQkMQc7SpIPGMGns2oKQxhhBHVthBPXr+ddFbzIkCgk574FSidD6j6iuiNSSSVy1scus95uVjHbFgc7iDnP1qmumknLyD8BXZPb283LRo3vimCxtVOfKX8aftJ9GFmc5aaYruBFGZG9W6CuhtbOK0Te2C4HLnt9KmMkca4UDjsoqtLunPznCjoorNy6vUNhZr1HRkRWIIxu6CimMirG2BziisZNvchjVmREUM3PoOTR9oHZT+NZzI73LCJWLn+6Oa0bfSb6QAyOIh/tcmqSk9hpN7B5/8As/rSNdBRlhge5rRj0aID97NI59sKKkOn2UIDfZg56cjcf1rRUpdSlCRiHUUHSNz+VIdSHaFvxYVu7bQYH2QD/tlTTb2Up2m0HJx9zH8qr2THyMwPtssrhdqopPPc0Vqz6XaiBp4VkjKc7SeP1orCpFxepnJW3LFlNBbReXLiKVThsjr71Z+3W3/PZaKK1VRrQvna0D7dbf8APZaa95bMpHnqKKKPayHzsi8+DJP21vzpfPgxj7YaKKftpC52Nlnje2aCKUzSPwKKKKLe01Y7c+rP/9k=" alt="Intro to Cybersecurity badge"><span>Intro to Cybersecurity</span></div><div class="badge"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAA4ADgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwB4AJ5OKldIgo2vz9OvX/6351Tlu4YHCu/zdcAZp51yIs3PLZyNp9v8K9Jy13PBhTbV7fgWXSIKNr8+469f/rVWJfJwARSS61E6tGxxuOcbTmqxvrXJPmNn/dNCku43SlfSP4FrL/3RRl8fdFVPttp/z0b8jU0U0T/MhbHuDzTTvsS4SW6J1JIBPFFP2Pt3FGC+pGKKozaaM2W1l+3GeIgkEHaQSOnSns18MEwwg922EE9f8a2oJFWFQTz7CpRKp7n8RWEopvY7oVpKKVzAFxdlw7R2xYNu3EHOfrVQaeWYl5Byc8CuoaGGTlkU++KaLSAHPlj8aEoLoU6tR9TDttOVmAjjLn1boK27e2jt13HBbHLHtUm9EGBj6CoJcy8McL6CqvfRaIxlLq3dhNdIysignIxmimMiqjYHairiktjnm23qIkiqgBPPpR5w7A1T2O8xWJWZj2Uc1pW2jXsuDIyxL/tcn8qJcsdWzWNOc/hRD5/+z+tIbgAcjH41rxaHCo/eyySH2+UVOdNs4ULLaq5Hrk5/OsXWh0N44So92c8bxP7rGkN6O0Z/OuiMVqnDWadO0YP9KjaGyk62J/CPFL28exp9Ul3OeN08jBdoUHr3orXuNMtTbSXEKSxFBkBuhoreE4zV4nHXpypysyXS7y0htgrlY5B94kfeq7/aNp/z3WiisZUYt3OiniZxilZB/aNp/wA91qu1xbbmK3pUM2SBRRU+xiX9bn2QqXNspBa+LY7Z4pgmtgMC/YD0zRRR7GIfWp9kNu7yAWcqJOZWkGAPSiiit6cFBaHJXqyqSuz/2Q==" alt="IT Customer Support badge"><span>IT Customer Support</span></div></div>
 </div></section>
 
 <section id="experience"><div class="wrap">
-  <h2>EXPERIENCE &amp; EDUCATION</h2>
+  <h2>Experience &amp; education<span class="dot">.</span></h2>
   <div class="item"><div class="when">3 MONTHS</div><h3>ICT Attachment</h3><div class="org">Machakos Level 5 Referral Hospital</div>
     <ul><li>Hardware maintenance and troubleshooting for hospital computers.</li><li>Trained staff on the hospital information system and supported its daily operation.</li><li>Helped with network setup and maintenance, and ran routine data backups.</li></ul></div>
   <div class="item"><div class="when">GAME AFRICA PROGRAMME</div><h3>Community &amp; Peacebuilding Programme</h3><div class="org">Midrift Hurinet</div>
@@ -122,8 +150,8 @@ footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
 </div></section>
 
 <section id="contact" class="contact"><div class="wrap">
-  <h2>GET IN TOUCH</h2>
-  <p>I'm looking for an ICT internship or entry-level role in software development or systems support. Let's talk.</p>
+  <h2>Let's talk<span class="dot">.</span></h2>
+  <p>I'm looking for an ICT internship or entry-level role in software development or systems support. I'd love to hear from you.</p>
   <div class="btns">
     <a class="btn primary" href="mailto:evansomondi392@gmail.com">evansomondi392@gmail.com</a>
     <a class="btn" href="https://github.com/Oyola007">GitHub</a>
