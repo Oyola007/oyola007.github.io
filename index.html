@@ -1,206 +1,941 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Evans Omondi Oyola | ICT Graduate & Full-Stack Developer</title>
-<meta name="description" content="Portfolio of Evans Omondi Oyola, BSc ICT graduate from Kenya. Full-stack PHP/MySQL web apps, Flutter mobile apps, website repairs, IT support and networking. Available for hire.">
+<meta name="description" content="Portfolio of Evans Omondi Oyola, BSc ICT graduate from Kenya. Full-stack development, complex systems, PHP/MySQL, Flutter, IT support and networking. Available for hire.">
+<meta name="theme-color" content="#fffaf2">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root{
-  --bg:#fffaf2;--panel:#ffffff;--line:#f0ddc4;
-  --text:#2b2320;--muted:#7a6e63;
-  --coral:#ff6f59;--teal:#1d9e75;--amber:#ffb703;--sky:#378add;
+:root {
+  --bg: #fffaf2;
+  --panel: #ffffff;
+  --line: #f0ddc4;
+  --text: #2b2320;
+  --muted: #7a6e63;
+  --coral: #ff6f59;
+  --teal: #1d9e75;
+  --amber: #ffb703;
+  --sky: #378add;
   color-scheme: light dark;
 }
-@media (prefers-color-scheme: dark){
-  :root{--bg:#1c1712;--panel:#262019;--line:#3a2f24;--text:#f3ebe1;--muted:#b8ab9d;}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1712;
+    --panel: #262019;
+    --line: #3a2f24;
+    --text: #f3ebe1;
+    --muted: #b8ab9d;
+  }
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif;line-height:1.65;padding-top:env(safe-area-inset-top,0px)}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb, var(--bg) 90%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav{display:flex;justify-content:space-between;align-items:center;height:60px}
-.logo{font-family:'Poppins',sans-serif;font-weight:700;font-size:20px}
-.logo span{color:var(--coral)}
-nav ul{display:flex;gap:22px;list-style:none;font-size:14px;color:var(--muted)}
-nav ul a:hover{color:var(--coral)}
-nav .nav-toggle{display:none;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer}
-@media(max-width:720px){
-  nav ul{display:none;position:absolute;top:60px;left:0;right:0;background:var(--panel);border-bottom:1px solid var(--line);flex-direction:column;padding:16px 22px;gap:14px}
-  nav ul.open{display:flex}
-  nav .nav-toggle{display:block}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.hero{padding:80px 0 60px;background:linear-gradient(160deg,#fff0e3,#fff8ee 60%);border-bottom:1px solid var(--line)}
-@media (prefers-color-scheme: dark){.hero{background:linear-gradient(160deg,#2a2016,#1c1712 60%)}}
-.tag{font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;color:var(--coral);letter-spacing:.5px}
-h1{font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(34px,6vw,54px);line-height:1.1;margin:12px 0 16px}
-h1 em{font-style:normal;color:var(--teal)}
-.hero p{max-width:600px;color:var(--muted);font-size:17px}
-.btns{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-.btn{padding:12px 22px;border-radius:30px;border:2px solid var(--coral);font-weight:600;font-size:14px;transition:.15s;word-break:break-word;max-width:100%}
-@media(max-width:480px){.btns{flex-direction:column;align-items:stretch}.btn{text-align:center;font-size:13px}}
-.btn.primary{background:var(--coral);color:#fff;border-color:var(--coral)}
-.btn.whatsapp{background:#25d366;color:#fff;border-color:#25d366}
-.btn:hover{transform:translateY(-2px)}
-.avatar-ring{width:150px;height:150px;border-radius:50%;margin:0 auto 26px;background:conic-gradient(var(--coral),var(--amber),var(--teal),var(--sky),var(--coral));display:flex;align-items:center;justify-content:center;padding:6px}
-.avatar-ring div{width:100%;height:100%;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:40px;color:var(--coral)}
-section{padding:60px 0;border-bottom:1px solid var(--line)}
-h2{font-family:'Poppins',sans-serif;font-weight:700;font-size:30px;margin-bottom:24px}
-h2 .dot{color:var(--coral)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.15s;display:flex;flex-direction:column}
-.card:hover{border-color:var(--coral);transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.06)}
-.card-top{height:6px;border-radius:6px;margin:-22px -22px 16px;background:var(--teal)}
-.card:nth-child(2) .card-top{background:var(--coral)}
-.card:nth-child(3) .card-top{background:var(--amber)}
-.card:nth-child(4) .card-top{background:var(--sky)}
-.card:nth-child(5) .card-top{background:var(--teal)}
-.card:nth-child(6) .card-top{background:var(--coral)}
-.card h3{font-family:'Poppins',sans-serif;font-size:18px;margin-bottom:6px}
-.card p{color:var(--muted);font-size:14.5px;flex:1}
-.status{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;margin-bottom:10px}
-.status.done{background:color-mix(in srgb, var(--teal) 18%, transparent);color:var(--teal)}
-.status.proto{background:color-mix(in srgb, var(--amber) 22%, transparent);color:#9a6b00}
-@media (prefers-color-scheme: dark){.status.proto{color:var(--amber)}}
-.stack{font-size:12px;color:var(--teal);font-weight:600;margin:14px 0 10px}
-.card a.link{font-size:13px;font-weight:600;color:var(--coral)}
-.skills h3{font-family:'Poppins',sans-serif;font-size:14px;color:var(--teal);margin:22px 0 10px;font-weight:600}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chip{font-size:13px;padding:7px 14px;border-radius:20px;border:1px solid var(--line);background:var(--panel)}
-.item{border-left:3px solid var(--teal);padding:2px 0 2px 18px;margin-bottom:26px}
-.item .when{font-size:12px;color:var(--muted);font-weight:600}
-.item h3{font-family:'Poppins',sans-serif;font-size:18px;margin:2px 0}
-.item .org{color:var(--coral);font-size:14px;margin-bottom:6px}
-.item ul{padding-left:18px;color:var(--muted);font-size:14.5px}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.service{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
-.service h3{font-family:'Poppins',sans-serif;font-size:17px;margin-bottom:8px}
-.service p{color:var(--muted);font-size:14.5px;margin-bottom:10px}
-.service .price{font-weight:600;color:var(--teal);font-size:14px}
-.hire-banner{background:linear-gradient(135deg,var(--coral),#ff9a59);color:#fff;border-radius:16px;padding:30px;margin-top:30px;text-align:center}
-.hire-banner h3{font-family:'Poppins',sans-serif;font-size:22px;margin-bottom:8px}
-.hire-banner p{opacity:.92;font-size:15px;margin-bottom:18px}
-.hire-banner .btn{border-color:#fff;background:#fff;color:var(--coral)}
-.contact p{color:var(--muted);max-width:560px;margin-bottom:22px}
-.contact a.inline{color:var(--coral);font-weight:600}
-footer{padding:28px 0;color:var(--muted);font-size:13px;text-align:center;padding-bottom:calc(28px + env(safe-area-inset-bottom,0px))}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, Arial, sans-serif;
+  line-height: 1.65;
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--sky);
+  outline-offset: 4px;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  gap: 16px;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--coral);
+}
+
+nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+nav ul a:hover {
+  color: var(--coral);
+}
+
+nav .nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    padding: 16px 22px;
+    gap: 14px;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav .nav-toggle {
+    display: block;
+  }
+}
+
+.hero {
+  padding: 80px 0 60px;
+  background: linear-gradient(160deg, #fff0e3, #fff8ee 60%);
+  border-bottom: 1px solid var(--line);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero {
+    background: linear-gradient(160deg, #2a2016, #1c1712 60%);
+  }
+}
+
+.tag {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--coral);
+  letter-spacing: .5px;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(34px, 6vw, 54px);
+  line-height: 1.1;
+  margin: 12px 0 16px;
+}
+
+h1 em {
+  font-style: normal;
+  color: var(--teal);
+}
+
+.hero p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.btns {
+  display: flex;
+  gap: 12px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: 2px solid var(--coral);
+  font-weight: 600;
+  font-size: 14px;
+  transition: .15s;
+  word-break: break-word;
+  max-width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    font-size: 13px;
+  }
+}
+
+.btn.primary {
+  background: var(--coral);
+  color: #fff;
+  border-color: var(--coral);
+}
+
+.btn.whatsapp {
+  background: #25d366;
+  color: #fff;
+  border-color: #25d366;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.avatar-ring {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 26px;
+  background: conic-gradient(
+    var(--coral),
+    var(--amber),
+    var(--teal),
+    var(--sky),
+    var(--coral)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.avatar-ring div {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--coral);
+}
+
+section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+h2 .dot {
+  color: var(--coral);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  transition: .15s;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card:hover {
+  border-color: var(--coral);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.06);
+}
+
+.card-top {
+  height: 6px;
+  border-radius: 6px;
+  margin: -22px -22px 16px;
+  background: var(--teal);
+}
+
+.card:nth-child(2) .card-top {
+  background: var(--coral);
+}
+
+.card:nth-child(3) .card-top {
+  background: var(--amber);
+}
+
+.card:nth-child(4) .card-top {
+  background: var(--sky);
+}
+
+.card:nth-child(5) .card-top {
+  background: var(--teal);
+}
+
+.card:nth-child(6) .card-top {
+  background: var(--coral);
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14.5px;
+  flex: 1;
+}
+
+.status {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.status.done {
+  background: color-mix(in srgb, var(--teal) 18%, transparent);
+  color: var(--teal);
+}
+
+.status.proto {
+  background: color-mix(in srgb, var(--amber) 22%, transparent);
+  color: #9a6b00;
+}
+
+@media (prefers-color-scheme: dark) {
+  .status.proto {
+    color: var(--amber);
+  }
+}
+
+.stack {
+  font-size: 12px;
+  color: var(--teal);
+  font-weight: 600;
+  margin: 14px 0 10px;
+}
+
+.card a.link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--coral);
+  overflow-wrap: anywhere;
+}
+
+.skills h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: var(--teal);
+  margin: 22px 0 10px;
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  font-size: 13px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.item {
+  border-left: 3px solid var(--teal);
+  padding: 2px 0 2px 18px;
+  margin-bottom: 26px;
+}
+
+.item .when {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.item h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin: 2px 0;
+}
+
+.item .org {
+  color: var(--coral);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.item ul {
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.service {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.service p {
+  color: var(--muted);
+  font-size: 14.5px;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+.service .price {
+  font-weight: 600;
+  color: var(--teal);
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.hire-banner {
+  background: linear-gradient(135deg, var(--coral), #ff9a59);
+  color: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.hire-banner h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.hire-banner p {
+  opacity: .92;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.hire-banner .btn {
+  border-color: #fff;
+  background: #fff;
+  color: var(--coral);
+}
+
+.contact p {
+  color: var(--muted);
+  max-width: 560px;
+  margin-bottom: 22px;
+}
+
+.contact a.inline {
+  color: var(--coral);
+  font-weight: 600;
+}
+
+footer {
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+  padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap"><nav>
-  <a class="logo" href="#top">EVANS<span>.</span>DEV</a>
-  <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navmenu').classList.toggle('open')">&#9776;</button>
-  <ul id="navmenu"><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#services">Services</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li></ul>
-</nav></div></header>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a class="logo" href="#top">EVANS<span>.</span>DEV</a>
+
+      <button class="nav-toggle"
+              type="button"
+              aria-label="Toggle navigation menu"
+              aria-controls="navmenu"
+              aria-expanded="false"
+              onclick="toggleMenu(this)">&#9776;</button>
+
+      <ul id="navmenu">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <main id="top">
-<div class="hero"><div class="wrap" style="text-align:center">
-  <div class="avatar-ring"><div>EO</div></div>
-  <div class="tag">BSc ICT GRADUATE · KENYA · AVAILABLE FOR HIRE</div>
-  <h1 style="margin-left:auto;margin-right:auto">Hi, I'm Evans <em>Oyola</em></h1>
-  <p style="margin-left:auto;margin-right:auto">I build full-stack web applications, fix and maintain existing websites, and keep the hardware and networks underneath them running. From hospital IT support to multi-role PHP/MySQL platforms, I deliver practical systems people actually use — for employers and for businesses that need reliable, affordable digital services.</p>
-  <div class="btns" style="justify-content:center">
-    <a class="btn primary" href="#services">Hire me</a>
-    <a class="btn" href="#projects">View my work</a>
-    <a class="btn whatsapp" href="https://wa.me/254790322423?text=Hi%20Evans%2C%20I%20need%20help%20with%20a%20website" target="_blank" rel="noopener">WhatsApp me</a>
-  </div>
-</div></div>
 
-<section id="projects"><div class="wrap">
-  <h2>Projects<span class="dot">.</span></h2>
-  <div class="grid">
-    <div class="card"><div class="card-top"></div><span class="status done">✔ Completed</span><h3>HoodGym</h3>
-      <p>Gym management platform with admin, trainer and member portals. Includes bookings, packages, classes, progress tracking, M-Pesa STK Push payments and an AI chat widget powered by the Claude API.</p>
-      <div class="stack">PHP · MySQL · M-Pesa Daraja · Claude API</div>
-      <a class="link" href="https://github.com/Oyola007/hoodgym">View on GitHub →</a></div>
-    <div class="card"><div class="card-top"></div><span class="status done">✔ Completed</span><h3>RoadRunner</h3>
-      <p>Bus booking platform with three role portals, interactive seat maps, QR-coded e-tickets, and dual payments through M-Pesa STK Push and Flutterwave.</p>
-      <div class="stack">PHP · MySQL · M-Pesa · Flutterwave</div>
-      <a class="link" href="https://github.com/Oyola007/roadrunner">View on GitHub →</a></div>
-    <div class="card"><div class="card-top"></div><span class="status done">✔ Completed</span><h3>Hospital Management System</h3>
-      <p>Hospital system with four role-based portals and a public landing page, inspired by my attachment at Machakos Level 5 Referral Hospital.</p>
-      <div class="stack">PHP · MySQL · XAMPP</div>
-      <a class="link" href="https://github.com/Oyola007/hospital-management-system">View on GitHub →</a></div>
-    <div class="card"><div class="card-top"></div><span class="status done">✔ Completed</span><h3>HoodAgent</h3>
-      <p>Android task and reminder app that turns natural-language input into structured tasks using the Claude API, with local notifications.</p>
-      <div class="stack">Flutter · Dart · Claude API</div>
-      <a class="link" href="https://github.com/Oyola007/hoodagent">View on GitHub →</a></div>
-    <div class="card"><div class="card-top"></div><span class="status done">✔ Completed</span><h3>Airline Refund Portal</h3>
-      <p>Customer, admin and finance portals for handling ticket refunds, with OTP email login, an in-app chat with file, photo and video sharing, and refund-to-finance handover.</p>
-      <div class="stack">PHP · MySQL · PHPMailer</div>
-      <a class="link" href="https://github.com/Oyola007/refund-portal">View on GitHub →</a></div>
-    <div class="card"><div class="card-top"></div><span class="status proto">● Prototype</span><h3>Flight Booking Website</h3>
-      <p>Airline booking site with database-driven flights and fares, seat selection, baggage extras, payment flow and an admin dashboard.</p>
-      <div class="stack">PHP · MySQL · XAMPP</div>
-      <a class="link" href="https://github.com/Oyola007/flight-booking">View on GitHub →</a></div>
-  </div>
-</div></section>
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap" style="text-align:center">
+    <div class="avatar-ring"><div>EO</div></div>
 
-<section id="services"><div class="wrap">
-  <h2>Services &amp; Pricing<span class="dot">.</span></h2>
-  <p style="color:var(--muted);max-width:640px;margin-bottom:24px">I work with small businesses, schools, shops and individuals. Clear quotes, fast delivery and support after launch. Prices below are starting points — contact me for a tailored quote.</p>
-  <div class="services">
-    <div class="service"><h3>💼 Business Websites</h3><p>A professional website for your business: home page, services, gallery and contact form — mobile friendly and fast.</p><div class="price">From KSh 5,000</div></div>
-    <div class="service"><h3>🔧 Website Repairs &amp; Fixes</h3><p>PHP errors, broken forms, database issues, slow pages, hacked-site cleanup and quick bug fixes on your existing site.</p><div class="price">From KSh 500</div></div>
-    <div class="service"><h3>🔄 Updates &amp; Maintenance</h3><p>Content updates, new pages, security updates and monthly maintenance so your site never goes stale.</p><div class="price">From KSh 500 · Monthly plans from KSh 1,500</div></div>
-    <div class="service"><h3>🖥️ IT Support &amp; Setup</h3><p>Computer troubleshooting, software installation, printer setup, email setup and small office networking.</p><div class="price">From KSh 300 per task</div></div>
-  </div>
-  <div class="hire-banner">
-    <h3>Need a website fixed or built? Let's talk today.</h3>
-    <p>Send me a message describing what you need and I'll reply with a free quote.</p>
-    <a class="btn" href="https://wa.me/254790322423?text=Hi%20Evans%2C%20I%20need%20help%20with%20a%20website" target="_blank" rel="noopener">Message me on WhatsApp</a>
-  </div>
-</div></section>
+    <div class="tag">BSc ICT GRADUATE · KENYA · AVAILABLE FOR HIRE</div>
 
-<section id="skills"><div class="wrap skills">
-  <h2>Skills<span class="dot">.</span></h2>
-  <h3>Development</h3>
-  <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Python</span><span class="chip">Flutter</span><span class="chip">Git &amp; GitHub</span></div>
-  <h3>IT &amp; Systems</h3>
-  <div class="chips"><span class="chip">Networking</span><span class="chip">Hardware Troubleshooting</span><span class="chip">Windows / Linux</span><span class="chip">CCTV &amp; Office IT Support</span></div>
-</div></section>
+    <h1 style="margin-left:auto;margin-right:auto">
+      Hi, I'm Evans <em>Oyola</em>
+    </h1>
 
-<section id="experience"><div class="wrap">
-  <h2>Experience &amp; Education<span class="dot">.</span></h2>
-  <div class="item">
-    <div class="when">ATTACHMENT</div>
-    <h3>IT Support &amp; Systems Attachment</h3>
-    <div class="org">Machakos Level 5 Referral Hospital</div>
-    <ul>
-      <li>Supported hospital IT operations, hardware troubleshooting and network maintenance.</li>
-      <li>Gained hands-on experience with real-world healthcare systems and user support.</li>
-    </ul>
-  </div>
-  <div class="item">
-    <div class="when">EDUCATION</div>
-    <h3>BSc Information &amp; Communication Technology</h3>
-    <div class="org">Kenya</div>
-    <ul>
-      <li>Full-stack web development, databases, networking and systems administration.</li>
-    </ul>
-  </div>
-</div></section>
+    <p style="margin-left:auto;margin-right:auto">
+      I build full-stack web applications, complex database-driven
+      systems, and Flutter mobile apps. I also repair websites and
+      provide IT support, hardware troubleshooting, and networking.
+      From hospital information systems to multi-role platforms,
+      I deliver practical technology solutions for businesses and
+      organizations.
+    </p>
 
-<section id="contact" class="contact"><div class="wrap">
-  <h2>Contact<span class="dot">.</span></h2>
-  <p>Whether you're a business that needs a website built or fixed, or an employer looking for a motivated full-stack developer — I'd love to hear from you.</p>
-  <div class="btns">
-    <a class="btn primary" href="mailto:evansomondi392@gmail.com">Email me</a>
-    <a class="btn whatsapp" href="https://wa.me/254790322423" target="_blank" rel="noopener">WhatsApp</a>
+    <div class="btns" style="justify-content:center">
+      <a class="btn primary" href="#services">Hire me</a>
+      <a class="btn" href="#projects">View my work</a>
+      <a class="btn whatsapp"
+         href="https://wa.me/254790322423?text=Hi%20Evans%2C%20I%20need%20help%20with%20a%20website"
+         target="_blank" rel="noopener noreferrer">WhatsApp me</a>
+    </div>
   </div>
-  <p style="margin-top:18px">Email: <a class="inline" href="mailto:evansomondi392@gmail.com">evansomondi392@gmail.com</a></p>
-</div></section>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects<span class="dot">.</span></h2>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-top"></div>
+        <span class="status done">✔ Completed</span>
+        <h3>HoodGym</h3>
+        <p>
+          Gym management platform with admin, trainer and member
+          portals. Includes bookings, packages, classes, progress
+          tracking, M-Pesa STK Push payments and an AI chat widget
+          powered by the Claude API.
+        </p>
+        <div class="stack">PHP · MySQL · M-Pesa Daraja · Claude API</div>
+        <a class="link" href="https://github.com/Oyola007/hoodgym"
+           target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <span class="status done">✔ Completed</span>
+        <h3>RoadRunner</h3>
+        <p>
+          Bus booking platform with three role portals, interactive
+          seat maps, QR-coded e-tickets, and payments through
+          M-Pesa STK Push and Flutterwave.
+        </p>
+        <div class="stack">PHP · MySQL · M-Pesa · Flutterwave</div>
+        <a class="link" href="https://github.com/Oyola007/roadrunner"
+           target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <span class="status done">✔ Completed</span>
+        <h3>Hospital Management System</h3>
+        <p>
+          Hospital management system with four role-based portals
+          and a public landing page, inspired by my attachment at
+          Machakos Level 5 Referral Hospital.
+        </p>
+        <div class="stack">PHP · MySQL · XAMPP</div>
+        <a class="link" href="https://github.com/Oyola007/hospital-management-system"
+           target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <span class="status done">✔ Completed</span>
+        <h3>HoodAgent</h3>
+        <p>
+          Android task and reminder app that turns natural-language
+          input into structured tasks using the Claude API, with
+          local notifications.
+        </p>
+        <div class="stack">Flutter · Dart · Claude API</div>
+        <a class="link" href="https://github.com/Oyola007/hoodagent"
+           target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <span class="status done">✔ Completed</span>
+        <h3>Airline Refund Portal</h3>
+        <p>
+          Customer, admin and finance portals for handling ticket
+          refunds, with OTP email login, in-app chat with file,
+          photo and video sharing, and refund-to-finance handover.
+        </p>
+        <div class="stack">PHP · MySQL · PHPMailer</div>
+        <a class="link" href="https://github.com/Oyola007/refund-portal"
+           target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-top"></div>
+        <span class="status proto">● Prototype</span>
+        <h3>Flight Booking Website</h3>
+        <p>
+          Airline booking site with database-driven flights and fares,
+          seat selection, baggage extras, a payment flow and an
+          admin dashboard.
+        </p>
+        <div class="stack">PHP · MySQL · XAMPP</div>
+        <a class="link" href="https://github.com/Oyola007/flight-booking"
+           target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES AND UPDATED PRICING -->
+<section id="services">
+  <div class="wrap">
+    <h2>Services &amp; Pricing<span class="dot">.</span></h2>
+
+    <p style="color:var(--muted);max-width:640px;margin-bottom:24px">
+      I work with businesses, schools, organizations and individuals.
+      Prices are starting estimates. Final quotations depend on
+      project scope, functionality, integrations and delivery time.
+    </p>
+
+    <div class="services">
+
+      <div class="service">
+        <h3>💼 Business Websites</h3>
+        <p>
+          Professional websites with home pages, services, galleries,
+          contact forms and responsive layouts optimized for phones
+          and computers.
+        </p>
+        <div class="price">From KSh 5,000</div>
+      </div>
+
+      <div class="service">
+        <h3>🔧 Website Repairs &amp; Fixes</h3>
+        <p>
+          Troubleshooting PHP errors, broken forms, database issues,
+          layout problems, performance issues and website bugs.
+        </p>
+        <div class="price">From KSh 500</div>
+      </div>
+
+      <div class="service">
+        <h3>🔄 Website Maintenance</h3>
+        <p>
+          Website updates, content changes, bug fixes, backups,
+          security updates and ongoing technical support.
+        </p>
+        <div class="price">From KSh 3,000/month</div>
+      </div>
+
+      <div class="service">
+        <h3>🖥️ IT Support &amp; Setup</h3>
+        <p>
+          Computer troubleshooting, software installation,
+          printer configuration, email setup, hardware support
+          and small-office networking.
+        </p>
+        <div class="price">From KSh 500 per task</div>
+      </div>
+
+      <div class="service">
+        <h3>⚙️ Complex Systems Development</h3>
+        <p>
+          Custom database-driven applications such as hospital
+          management systems, school portals, inventory platforms,
+          booking systems and multi-role business applications.
+          Can include dashboards, reports and payment integrations.
+        </p>
+        <div class="price">From KSh 25,000</div>
+      </div>
+
+      <div class="service">
+        <h3>🏢 Advanced Enterprise Systems</h3>
+        <p>
+          Larger, modular systems with multiple departments,
+          role-based permissions, advanced reporting, workflow
+          automation, API integrations and scalable architecture.
+          Requirements and security needs are assessed before quoting.
+        </p>
+        <div class="price">From KSh 60,000+</div>
+      </div>
+
+      <div class="service">
+        <h3>📱 Mobile App Development</h3>
+        <p>
+          Flutter-based Android applications, task management tools,
+          notification features, API integration and custom mobile
+          interfaces for business needs.
+        </p>
+        <div class="price">From KSh 15,000</div>
+      </div>
+
+      <div class="service">
+        <h3>🗄️ Database Design &amp; Integration</h3>
+        <p>
+          MySQL database design, data organization, application
+          integration, query troubleshooting and structured
+          storage for business applications.
+        </p>
+        <div class="price">From KSh 5,000</div>
+      </div>
+
+    </div>
+
+    <div class="hire-banner">
+      <h3>Have a project in mind?</h3>
+      <p>
+        Tell me what you want to build or fix, and I'll discuss
+        the requirements and provide a tailored quotation.
+      </p>
+      <a class="btn"
+         href="https://wa.me/254790322423?text=Hi%20Evans%2C%20I%20would%20like%20a%20quote%20for%20a%20software%20project"
+         target="_blank" rel="noopener noreferrer">
+        Request a quotation on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap skills">
+    <h2>Skills<span class="dot">.</span></h2>
+
+    <h3>Development</h3>
+    <div class="chips">
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">PHP</span>
+      <span class="chip">MySQL</span>
+      <span class="chip">Python</span>
+      <span class="chip">Flutter</span>
+      <span class="chip">Dart</span>
+      <span class="chip">Git &amp; GitHub</span>
+      <span class="chip">REST APIs</span>
+    </div>
+
+    <h3>IT &amp; Systems</h3>
+    <div class="chips">
+      <span class="chip">Networking</span>
+      <span class="chip">Hardware Troubleshooting</span>
+      <span class="chip">Windows / Linux</span>
+      <span class="chip">CCTV &amp; Office IT Support</span>
+      <span class="chip">Database Management</span>
+      <span class="chip">Technical Support</span>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="wrap">
+    <h2>Certifications &amp; Training<span class="dot">.</span></h2>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-top"></div>
+        <span class="status done">✔ Course Completed</span>
+        <h3>Python Essentials 1</h3>
+        <p>
+          Cisco Networking Academy course covering foundational
+          Python programming concepts, including variables,
+          data types, basic operations, conditional logic and
+          introductory programming.
+        </p>
+        <div class="stack">
+          Cisco Networking Academy · Python Programming
+        </div>
+
+        <!-- Replace the placeholder below with your actual
+             certificate URL when you have one. -->
+        <a class="link"
+           href="YOUR_CERTIFICATE_LINK"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Certificate →
+        </a>
+      </div>
+    </div>
+
+    <p style="color:var(--muted);font-size:13px;margin-top:16px">
+      Additional certificates and verified digital badges can be
+      added here as they become available.
+    </p>
+  </div>
+</section>
+
+<!-- EXPERIENCE AND EDUCATION -->
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience &amp; Education<span class="dot">.</span></h2>
+
+    <div class="item">
+      <div class="when">ATTACHMENT</div>
+      <h3>IT Support &amp; Systems Attachment</h3>
+      <div class="org">Machakos Level 5 Referral Hospital</div>
+      <ul>
+        <li>
+          Supported hospital IT operations, hardware troubleshooting
+          and network maintenance.
+        </li>
+        <li>
+          Gained practical exposure to healthcare systems and
+          technical user support.
+        </li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="when">EDUCATION</div>
+      <h3>BSc Information &amp; Communication Technology</h3>
+      <div class="org">Scott Christian University, Kenya</div>
+      <ul>
+        <li>
+          Studied software development, databases, networking
+          and systems administration.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact<span class="dot">.</span></h2>
+
+    <p>
+      Whether you need a business website, a custom software system,
+      a mobile application or technical support, I'd love to hear
+      about your project.
+    </p>
+
+    <div class="btns">
+      <a class="btn primary"
+         href="mailto:evansomondi392@gmail.com">Email me</a>
+
+      <a class="btn whatsapp"
+         href="https://wa.me/254790322423"
+         target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+
+    <p style="margin-top:18px">
+      Email:
+      <a class="inline" href="mailto:evansomondi392@gmail.com">
+        evansomondi392@gmail.com
+      </a>
+    </p>
+  </div>
+</section>
+
 </main>
 
-<footer><div class="wrap">© <span id="year"></span> Evans Omondi Oyola · Built with plain HTML, CSS &amp; a love of PHP</div></footer>
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> Evans Omondi Oyola ·
+    Built with HTML, CSS, JavaScript and PHP
+  </div>
+</footer>
+
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-document.querySelectorAll('#navmenu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navmenu').classList.remove('open')));
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+function toggleMenu(button) {
+  const menu = document.getElementById('navmenu');
+  const isOpen = menu.classList.toggle('open');
+  button.setAttribute('aria-expanded', String(isOpen));
+}
+
+document.querySelectorAll('#navmenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('navmenu').classList.remove('open');
+    document.querySelector('.nav-toggle')
+      .setAttribute('aria-expanded', 'false');
+  });
+});
 </script>
+
 </body>
 </html>
